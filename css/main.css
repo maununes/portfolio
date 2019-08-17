@@ -5,9 +5,73 @@
    ========================================================================== */
    
 .jumbotron{
-   text-align:center;
-  
+	text-align:center;
+	color:white;
+	padding-top:10px;
+	padding-bottom:14px;
+	background:grey;
 }
+
+.jumbotron h2{
+	padding-bottom:0px;
+}
+
+.jumbotron p{
+	color:blue;
+	padding-top:10px;
+}
+
+.container{
+	color:white;
+}
+
+.card{
+	background-position: center top;
+    background-size: 100% auto;
+	text-align:right;
+	padding-top:100px;
+}
+
+.card1{
+	background-image: url('../img/1.jpg');
+}
+
+.card2{
+	text-align:center;
+	padding-top:44px;
+	background:grey;
+	padding-bottom:30px;
+}
+
+.card3{
+	background-image: url('../img/2.jpg');
+	padding-top:270px;
+}
+
+.card4{
+	background-image: url('../img/3.jpg');
+}
+
+.card5{
+	background-image: url('../img/4.jpg');
+}
+
+.card6{
+	background-image: url('../img/5.jpg');
+}
+
+.card7{
+	background-image: url('../img/6.jpg');
+}
+
+.card8{
+	background-image: url('../img/7.jpg');
+}
+
+footer{
+	color:black;
+}
+
 
 
 
