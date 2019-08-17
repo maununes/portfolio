@@ -3,6 +3,14 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.navbar{
+	border-top: orange solid 5px;
+	
+}
+
+.navbar-brand{
+	color:blue !important;
+}
    
 .jumbotron{
 	text-align:center;
@@ -25,6 +33,13 @@
 	color:white;
 }
 
+.main-card{
+	background:grey;
+	text-align:center;
+	padding-top:40px;
+	padding-bottom:20px;
+}
+
 .card{
 	background-position: center top;
     background-size: 100% auto;
@@ -38,7 +53,7 @@
 
 .card2{
 	text-align:center;
-	padding-top:44px;
+	padding-top:57px;
 	background:grey;
 	padding-bottom:30px;
 }
