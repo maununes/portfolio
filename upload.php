@@ -2,17 +2,14 @@
 
 if(isset($_POST['img'])){
 	$uploaddir = 'img/';
-	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+	$uploadfile = $uploaddir . basename($_POST['img']);
 
 	echo '<pre>';
-	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+	if ($_FILES['file']['type'] == 'image/jpeg' && "image/jpeg" && move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
 		echo "Arquivo válido e enviado com sucesso.\n";
 	} else {
-		echo "Possível ataque de upload de arquivo!\n";
+		echo "Arquivo não enviado ou formato inválido!\n";
 	}
-
-	echo 'Aqui está mais informações de debug:';
-	print_r($_FILES);
 
 	print "</pre>";
 }
@@ -71,25 +68,34 @@ if(isset($_POST['img'])){
     </nav>
 
     <div class="container">
-		<h2 style="color:black">Upload de imagem<h2>
+		<h2 style="color:black">Upload de imagem</h2>
+		
 		<div class="row">
 			<div class="col-md-4">
-				<form method="">
+				<div class="alert alert-warning" role="alert">
+				  São permitidas apenas imagens do tipo: <b>.jpg</b>
+				</div>
+				
+				<form  method="post" enctype="multipart/form-data">
+					<b style="color:black">Selecione a imagem:</b>
 					<select name="img" class="form-control">
-						<option value="img1">Imagem 1</option>
-						<option value="img2">Imagem 2</option>
-						<option value="img3">Imagem 3</option>
-						<option value="img4">Imagem 4</option>
-						<option value="img5">Imagem 5</option>
-						<option value="img6">Imagem 6</option>
-						<option value="img7">Imagem 7</option>
+						<option value="1.jpg">Imagem 1</option>
+						<option value="2.jpg">Imagem 2</option>
+						<option value="3.jpg">Imagem 3</option>
+						<option value="4.jpg">Imagem 4</option>
+						<option value="5.jpg">Imagem 5</option>
+						<option value="6.jpg">Imagem 6</option>
+						<option value="7.jpg">Imagem 7</option>
 					</select>
+					<br>
+					<b style="color:black">Selecione o arquivo:</b>
+					<input type="file" name="file" id="fileToUpload">
 					<br>
 					<button class="btn btn-primary" type="submit">Enviar</button>
 				</form>
 			</div>
 		</div>
-    </div>
+    
 
       <hr>
 
