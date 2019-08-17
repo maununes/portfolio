@@ -1,4 +1,26 @@
-<!doctype html>
+<?php
+
+if(isset($_POST['img'])){
+	$uploaddir = 'img/';
+	$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+
+	echo '<pre>';
+	if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+		echo "Arquivo válido e enviado com sucesso.\n";
+	} else {
+		echo "Possível ataque de upload de arquivo!\n";
+	}
+
+	echo 'Aqui está mais informações de debug:';
+	print_r($_FILES);
+
+	print "</pre>";
+}
+
+
+
+
+?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -41,68 +63,33 @@
           <a class="navbar-brand" href="#">Empresa</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form action="upload.php" method="POST" class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input name="email" type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input name="password" type="password" placeholder="Senha" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
-          </form>
+			<form class="navbar-form navbar-right" role="form">
+				<a href="index.html" class="btn btn-primary">Sair</a>
+			</form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12 main-card">
-			<h3>Portfólio</h3>
+		<h2 style="color:black">Upload de imagem<h2>
+		<div class="row">
+			<div class="col-md-4">
+				<form method="">
+					<select name="img" class="form-control">
+						<option value="img1">Imagem 1</option>
+						<option value="img2">Imagem 2</option>
+						<option value="img3">Imagem 3</option>
+						<option value="img4">Imagem 4</option>
+						<option value="img5">Imagem 5</option>
+						<option value="img6">Imagem 6</option>
+						<option value="img7">Imagem 7</option>
+					</select>
+					<br>
+					<button class="btn btn-primary" type="submit">Enviar</button>
+				</form>
+			</div>
 		</div>
-	</div>
-      <div class="row">
-        <div class="col-md-4">
-			<div class="row">
-				<div class="col-md-12 card card1">
-					<h4>Nome da Empresa</h4>
-					<p>Serviço</p>
-				</div>
-				<div class="col-md-12  card card2">
-					<h3>CONFIRA NOSSOS<br> TRABALHOS &#8594;</h3>
-				</div>
-			</div>
-        </div>
-        <div class="col-md-3  card card3">
-          <h4>Nome da Empresa</h4>
-          <p>Serviço</p>
-       </div>
-        <div class="col-md-5">
-          <div class="row">
-				<div class="col-md-12  card card4">
-					<h4>Nome da Empresa</h4>
-					<p>Serviço</p>
-				</div>
-				<div class="col-md-12  card card5">
-					<h4>Nome da Empresa</h4>
-					<p>Serviço</p>
-				</div>
-			</div>
-        </div>
-      </div>
-	  <div class="row">
-        <div class="col-md-4  card card6">
-          <h4>Nome da Empresa</h4>
-          <p>Serviço</p>
-        </div>
-        <div class="col-md-4  card card7">
-          <h4>Nome da Empresa</h4>
-          <p>Serviço</p>
-       </div>
-        <div class="col-md-4  card card8">
-          <h4>Nome da Empresa</h4>
-          <p>Serviço</p>
-        </div>
-      </div>
+    </div>
 
       <hr>
 

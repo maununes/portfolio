@@ -48,39 +48,40 @@
 }
 
 .card1{
-	background-image: url('../img/1.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/1.jpg');
 }
 
 .card2{
-	text-align:center;
-	padding-top:57px;
+	text-align:left;
+	padding-top:40px;
 	background:grey;
-	padding-bottom:30px;
+	padding-bottom:47px;
+	padding-left:90px;
 }
 
 .card3{
-	background-image: url('../img/2.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/2.jpg');
 	padding-top:270px;
 }
 
 .card4{
-	background-image: url('../img/3.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/3.jpg');
 }
 
 .card5{
-	background-image: url('../img/4.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/4.jpg');
 }
 
 .card6{
-	background-image: url('../img/5.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/5.jpg');
 }
 
 .card7{
-	background-image: url('../img/6.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/6.jpg');
 }
 
 .card8{
-	background-image: url('../img/7.jpg');
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('../img/7.jpg');
 }
 
 footer{
